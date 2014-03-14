@@ -46,3 +46,8 @@ printf "${bold}${green}OK${normal}\n"
 
 # Success message
 printf "Success! You can now turn off your computer.\n"
+
+# Success message
+printf "\n  ${greenbg}                                                   ${normal}\n"
+printf "  ${white}${greenbg}${bold}        You can now turn off your computer.        ${normal}"
+printf "\n  ${greenbg}                                                   ${normal}\n\n"
