@@ -28,8 +28,8 @@ printf "${bold}${green}OK${normal}\n"
 
 # Check the 2 filesystems after operations
 printf "  ${yellow}[>>>>  ]${normal}  4. Checking that LVs are clean...      "
-sudo e2fsck -f /dev/ubuntu-vg/root > /dev/null 2>&1
-sudo e2fsck -f /dev/ubuntu-vg/home > /dev/null 2>&1
+sudo e2fsck -f /dev/ubuntu-vg/root -y > /dev/null 2>&1
+sudo e2fsck -f /dev/ubuntu-vg/home -y > /dev/null 2>&1
 printf "${bold}${green}OK${normal}\n"
 
 # Retrieve the home content from the original root partition
