@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 bold=`tput bold`
 normal=`tput sgr0`
 green=`tput setaf 2`
