@@ -29,7 +29,7 @@ When the **Installation Complete** box pops up, hit the close button (`x`) inste
 
 Open a *Terminal* (by hitting the `Super`/`Windows` key of your keyboard and typing *Terminal* in the search field), and type the following lines:
 
-    wget https://raw.github.com/astorije/cryptic/master/cryptic.sh
+    wget -N git.io/cryptic.sh
     chmod +x cryptic.sh
     ./cryptic.sh
 
