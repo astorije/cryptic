@@ -1,7 +1,7 @@
 cryptic
 =======
 
-It is not possible to set custom partitions while using Ubuntu installer (called *ubiquity*) to set up *[LVM][2]* on top of an [encrypted disk][2]. However, one cannot have two separate partitions for `/` (the system) and for `/home` (user files), which is a fairly common partition scheme.
+It is not possible to set custom partitions while using Ubuntu installer (called *ubiquity*) to set up [LVM][1] on top of an [encrypted disk][2]. However, one cannot have two separate partitions for `/` (the system) and for `/home` (user files), which is a fairly common partition scheme.
 
 This script solves this problem by setting up these two partitions once Ubuntu is installed. `/` gets a 20GiB partition, and `/home` gets the remaining space of the disk.
 
