@@ -19,3 +19,6 @@ sudo mount /dev/ubuntu-vg/root /mnt/ubuntu-root
 sudo mount /dev/ubuntu-vg/home /mnt/ubuntu-home
 sudo rsync -aXS /mnt/ubuntu-root/home/. /mnt/ubuntu-home/.
 sudo rm -rf /mnt/ubuntu-root/home/*
+
+# Update fstab to mount the home volume at startup
+echo "/dev/mapper/ubuntu--vg-home  /home  ext4  defaults  0  2" | sudo tee --append /mnt/ubuntu-root/etc/fstab
