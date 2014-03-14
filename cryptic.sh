@@ -9,6 +9,10 @@ sudo lvcreate --extents 100%FREE --name home ubuntu-vg
 # Create an ext4 filesystem for home (taking the whole space in the logical volume)
 sudo mkfs.ext4 /dev/ubuntu-vg/home
 
+# Check the 2 filesystems after operations
+sudo e2fsck -f /dev/ubuntu-vg/root
+sudo e2fsck -f /dev/ubuntu-vg/home
+
 # Retrieve the home content from the original root partition
 sudo mkdir -p /mnt/ubuntu-{root,home}
 sudo mount /dev/ubuntu-vg/root /mnt/ubuntu-root
