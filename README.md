@@ -35,6 +35,7 @@ Open a *Terminal* (by hitting the `Super`/`Windows` key of your keyboard and typ
 
 The first line downloads the script, so you need an Internet connection up and running.
 
+If you restarted your computer after the installation, your disk passphrase will be asked at the beginning of the process.
 The script will take some time to run, grab a coffee and be patient.
 
 Once the script has finished, shutdown your computer, remove the USB key you used to install Ubuntu (if any), restart and enjoy your fresh install.
