@@ -11,6 +11,14 @@ greenbg=`tput setab 2`
 
 printf "\n"
 
+if [ -b /dev/ubuntu-vg ]; then
+  printf "  ${yellow}[      ]${normal}  0. Opening the encrypted device...     "
+  printf "\n               "
+  sudo cryptsetup luksOpen /dev/sda5 sda5_crypt
+  printf "    "
+  printf "${bold}${green}OK${normal}\n"
+fi
+
 # Shrink the root logical volume after checking (e2fsck) and shrinking (resize2fs) the root fs
 printf "  ${yellow}[>     ]${normal}  1. Resizing root...                    "
 sudo lvresize --resizefs --size 20G /dev/ubuntu-vg/root > /dev/null 2>&1
