@@ -25,7 +25,7 @@ Follow the normal Ubuntu installation process, and when reaching the **Installat
 
 Go on with the normal installation.
 
-When the **Installation Complete** box pops up, hit the close button (`x`) instead of *Restart Now*. The current script will not work if you restart your computer.
+When the **Installation Complete** box pops up, hit the close button (`x`) instead of *Restart Now* to start the live session. The script cannot be run from the installed system, it has to be run from the live session (CD or USB key).
 
 Open a *Terminal* (by hitting the `Super`/`Windows` key of your keyboard and typing *Terminal* in the search field), and type the following lines:
 
