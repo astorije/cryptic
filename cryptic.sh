@@ -11,7 +11,7 @@ greenbg=`tput setab 2`
 
 printf "\n"
 
-if [ -b /dev/ubuntu-vg ]; then
+if [ ! -b /dev/ubuntu-vg ]; then
   printf "  ${yellow}[      ]${normal}  0. Opening the encrypted device...     "
   printf "\n               "
   sudo cryptsetup luksOpen /dev/sda5 sda5_crypt
