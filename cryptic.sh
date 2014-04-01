@@ -11,6 +11,15 @@ greenbg=`tput setab 2`
 
 printf "\n"
 
+# If no argument, default size is 20GiB
+if [ -z "$1" ]; then
+  SIZE="20G"
+else
+  SIZE=$1
+fi
+
+printf "\n"
+
 if [ ! -b /dev/ubuntu-vg ]; then
   printf "  ${yellow}[      ]${normal}  0. Opening the encrypted device...     "
   printf "\n               "
@@ -21,7 +30,7 @@ fi
 
 # Shrink the root logical volume after checking (e2fsck) and shrinking (resize2fs) the root fs
 printf "  ${yellow}[>     ]${normal}  1. Resizing root...                    "
-sudo lvresize --resizefs --size 20G /dev/ubuntu-vg/root > /dev/null 2>&1
+sudo lvresize --resizefs --size $SIZE /dev/ubuntu-vg/root > /dev/null 2>&1
 printf "${bold}${green}OK${normal}\n"
 
 # Create a logical volume the size of all remaining space in the volume group
