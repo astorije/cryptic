@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
@@ -7,15 +7,21 @@ normal=`tput sgr0`
 green=`tput setaf 2`
 yellow=`tput setaf 3`
 white=`tput setaf 7`
+redbg=`tput setab 1`
 greenbg=`tput setab 2`
-
-printf "\n"
 
 # If no argument, default size is 20GiB
 if [ -z "$1" ]; then
   SIZE="20G"
 else
-  SIZE=$1
+  if [[ "$1" =~ ^[0-9]+[mMgGtTpPeE]$ ]]; then
+    SIZE=$1
+  else
+    printf "\n  ${redbg}                                                   ${normal}\n"
+    printf "  ${white}${redbg}${bold}        The size you specified is invalid.         ${normal}"
+    printf "\n  ${redbg}                                                   ${normal}\n\n"
+    exit 1
+  fi
 fi
 
 printf "\n"
