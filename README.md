@@ -35,6 +35,8 @@ Open a *Terminal* (by hitting the `Super`/`Windows` key of your keyboard and typ
 
 The first line downloads the script, so you need an Internet connection up and running.
 
+By default, the script creates a system partition of 20G. You can manually set a size as an argument, such as `./cryptic.sh 15G`.
+
 If you restarted your computer after the installation, your disk passphrase will be asked at the beginning of the process.
 The script will take some time to run, grab a coffee and be patient.
 
