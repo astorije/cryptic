@@ -54,6 +54,10 @@ The argument has to be a numeric value followed by a unit. Available units are:
 - P for petabytes
 - E for exabytes
 
+However, be very careful when providing a custom size, as:
+- it must not be larger than your disk capacity
+- it must not be smaller than the size taken by Ubuntu files (or data would be permanently lost)
+
 (Freely adapted from [`lvmresize` documentation][3])
 
 [1]: http://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)
