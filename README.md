@@ -13,7 +13,7 @@ LVM and full disk encryption is built-in in the standard installer since Ubuntu 
 
 Also, nothing proves that it will work with further releases of Ubuntu, as the script depends on *ubiquity* parameters that might (and will likely) change.
 
-## Usage
+## Basic usage
 
 This script is supposed to be headache-free so its usage is kept simple.
 
@@ -35,12 +35,27 @@ Open a *Terminal* (by hitting the `Super`/`Windows` key of your keyboard and typ
 
 The first line downloads the script, so you need an Internet connection up and running.
 
-By default, the script creates a system partition of 20G. You can manually set a size as an argument, such as `./cryptic.sh 15G`.
-
 If you restarted your computer after the installation, your disk passphrase will be asked at the beginning of the process.
 The script will take some time to run, grab a coffee and be patient.
 
-Once the script has finished, shutdown your computer, remove the USB key you used to install Ubuntu (if any), restart and enjoy your fresh install.
+Once the script has finished, shutdown your computer, remove the USB key or CD you used to install Ubuntu, restart and enjoy your fresh install.
+
+## Advanced usage
+
+### Setting up a custom size for the system partition
+
+By default, the script creates a system partition of 20G. You can manually set a size as an argument, such as `./cryptic.sh 15G`.
+
+The argument has to be a numeric value followed by a unit. Available units are:
+
+- M for megabytes
+- G for gigabytes
+- T for terabytes
+- P for petabytes
+- E for exabytes
+
+(Freely adapted from [`lvmresize` documentation][3])
 
 [1]: http://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)
 [2]: http://en.wikipedia.org/wiki/Disk_encryption
+[3]: http://linux.die.net/man/8/lvresize
