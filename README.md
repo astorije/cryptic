@@ -69,6 +69,22 @@ However, be very careful when providing a custom size, as:
 
 (Freely adapted from [`lvmresize` documentation][3])
 
+### Checking the changes
+
+Once using the installed system, you can check that the changes have been successfully applied by running the following command line:
+
+    df -h | grep unt
+
+It should display something like this:
+
+    Filesystem                   Size  Used Avail Use% Mounted on
+    /dev/mapper/ubuntu--vg-root   20G  3.2G   16G  17% /
+    /dev/mapper/ubuntu--vg-home   89G   58M   84G   1% /home
+
+Some information might vary, like the size of the root partition if you have specified a custom size when running the script, or the size of the home partition which depends on your disk capacity.
+
+The important piece of information here is that you have two partitions (`root` and `home`) and that they are both members of the main Volume Group (`ubuntu-vg`).
+
 [1]: http://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)
 [2]: http://en.wikipedia.org/wiki/Disk_encryption
 [3]: http://linux.die.net/man/8/lvresize
