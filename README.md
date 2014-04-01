@@ -42,6 +42,15 @@ Once the script has finished, shutdown your computer, remove the USB key or CD y
 
 ## Advanced usage
 
+### How to run `cryptic` without an Internet connection
+
+The `wget` command assumes that you have access to the Internet. If not, download the script on another machine that is connected. Copy the file on a USB key and paste it in the *Home* folder (accessible through the second icon from the *Launcher*, the main menu on the left).
+
+Open a *Terminal* and type the following lines:
+
+    chmod +x cryptic.sh
+    ./cryptic.sh
+
 ### Setting up a custom size for the system partition
 
 By default, the script creates a system partition of 20G. You can manually set a size as an argument, such as `./cryptic.sh 15G`.
