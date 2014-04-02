@@ -11,7 +11,7 @@ redbg=`tput setab 1`
 greenbg=`tput setab 2`
 
 # Awkwardly checks (using the /cow trick) that the script is run from a live session.
-if  df | grep -w / | grep -q '/cow'; then
+if ! df | grep -w / | grep -q '/cow'; then
   printf "\n  ${redbg}                                                   ${normal}\n"
   printf "  ${white}${redbg}${bold}    This script must be run from a live session.   ${normal}"
   printf "\n  ${redbg}                                                   ${normal}\n\n"
