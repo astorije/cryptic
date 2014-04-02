@@ -42,6 +42,13 @@ if [ ! -e /dev/ubuntu-vg ]; then
   printf "${bold}${green}OK${normal}\n"
 fi
 
+if [ -e /dev/ubuntu-vg/home ]; then
+    printf "\n  ${greenbg}                                                   ${normal}\n"
+    printf "  ${white}${greenbg}${bold}       The script has already been executed.       ${normal}"
+    printf "\n  ${greenbg}                                                   ${normal}\n\n"
+    exit 1
+fi
+
 # Shrink the root logical volume after checking (e2fsck) and shrinking (resize2fs) the root fs
 printf "  ${yellow}[>     ]${normal}  1. Resizing root...                    "
 sudo lvresize --resizefs --size $SIZE /dev/ubuntu-vg/root > /dev/null 2>&1
