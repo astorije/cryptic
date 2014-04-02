@@ -10,6 +10,14 @@ white=`tput setaf 7`
 redbg=`tput setab 1`
 greenbg=`tput setab 2`
 
+# Awkwardly checks (using the /cow trick) that the script is run from a live session.
+if [ ! $(df | grep -w / | grep -q '/cow') ]; then
+  printf "\n  ${redbg}                                                   ${normal}\n"
+  printf "  ${white}${redbg}${bold}    This script must be run from a live session.   ${normal}"
+  printf "\n  ${redbg}                                                   ${normal}\n\n"
+  exit 1
+fi
+
 # If no argument, default size is 20GiB
 if [ -z "$1" ]; then
   SIZE="20G"
@@ -18,7 +26,7 @@ else
     SIZE=$1
   else
     printf "\n  ${redbg}                                                   ${normal}\n"
-    printf "  ${white}${redbg}${bold}        The size you specified is invalid.         ${normal}"
+    printf "  ${white}${redbg}${bold}         The size you specified is invalid.        ${normal}"
     printf "\n  ${redbg}                                                   ${normal}\n\n"
     exit 1
   fi
