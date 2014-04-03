@@ -58,6 +58,7 @@ printf "${bold}${green}OK${normal}\n"
 # Create a logical volume the size of all remaining space in the volume group
 printf "  ${yellow}[>>    ]${normal}  2. Creating a LV for home...           "
 sudo lvcreate --extents 100%FREE --name home ubuntu-vg > /dev/null
+sleep 5
 printf "${bold}${green}OK${normal}\n"
 
 # Create an ext4 filesystem for home (taking the whole space in the logical volume)
