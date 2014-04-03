@@ -38,7 +38,8 @@ if [ ! -e /dev/ubuntu-vg ]; then
   printf "  ${yellow}[      ]${normal}  0. Opening the encrypted device...     "
   printf "\n               "
   sudo cryptsetup luksOpen /dev/sda5 sda5_crypt
-  printf "                                    "
+  sleep 5
+  printf "                                                   "
   printf "${bold}${green}OK${normal}\n"
 fi
 
