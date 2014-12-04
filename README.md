@@ -19,7 +19,7 @@ When the **Installation Complete** box pops up, hit the close button (`x`) inste
 
 Open a *Terminal* (by hitting the `Super`/`Windows` key of your keyboard and typing *Terminal* in the search field), and type the following lines:
 
-    wget -N git.io/cryptic.sh
+    wget -N https://astori.fr/cryptic.sh
     chmod +x cryptic.sh
     ./cryptic.sh
 
