@@ -80,6 +80,8 @@ This script has been successfully tested on Ubuntu 14.04 LTS and 13.10.
 
 LVM and full disk encryption were introduced in the standard installer since Ubuntu 12.10 so the script *should* work with releases made after that, though without any guarantee. This script might also not work with further releases of Ubuntu. Please create bug reports if you encounter any compatibility issue.
 
+This script does not work as is with other flavors of Ubuntu. However, I managed to make it work on Lubuntu by slightly editing the script (updating the name of the volume group/logical volumes accordingly). A future fix for this might add distribution checking or just provide flavored scripts.
+
 [1]: http://en.wikipedia.org/wiki/Disk_encryption
 [2]: http://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)
 [3]: http://linux.die.net/man/8/lvresize
