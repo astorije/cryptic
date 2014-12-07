@@ -20,8 +20,7 @@ When the **Installation Complete** box pops up, hit the close button (`x`) inste
 Open a *Terminal* (using the shortcut `Ctrl+Alt+T`) and type the following lines:
 
     wget -N https://astori.fr/cryptic.sh
-    chmod +x cryptic.sh
-    ./cryptic.sh
+    . cryptic.sh
 
 After a while, a success message shows up. Shutdown your computer, remove the USB key or DVD you used to install Ubuntu, restart and enjoy your fresh install.
 
@@ -29,10 +28,9 @@ After a while, a success message shows up. Shutdown your computer, remove the US
 
 ### I don't have access to the Internet
 
-The `wget` command assumes that you have access to the Internet. If not, download the script on another machine that is connected. Copy the file on a USB key and paste it in the *Home* folder (accessible through the second icon from the *Launcher*, the main menu on the left). Open a *Terminal* and type the following lines:
+The `wget` command assumes that you have access to the Internet. If not, download the script on another machine that is connected. Copy the file on a USB key and paste it in the *Home* folder (accessible through the second icon from the *Launcher*, the main menu on the left). Open a *Terminal* and type the following line:
 
-    chmod +x cryptic.sh
-    ./cryptic.sh
+    . cryptic.sh
 
 ### I get the error "This script must be run from a live session"
 
@@ -48,7 +46,7 @@ On some older versions of the installer (noticed in Ubuntu 13.10 installer), thi
 
 ### Setting up a custom size for the system partition
 
-By default, the script creates a system partition of 20G. You can manually set a size as an argument, such as `./cryptic.sh 15G`.
+By default, the script creates a system partition of 20G. You can manually set a size as an argument, such as `. cryptic.sh 15G`.
 
 The argument has to be a numeric value followed by a unit (freely adapted from [`lvmresize` documentation][3]). Available units are:
 
