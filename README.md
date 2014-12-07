@@ -17,7 +17,7 @@ Go on with the normal installation.
 
 When the **Installation Complete** box pops up, hit the close button (`x`) instead of *Restart Now* to start the live session.
 
-Open a *Terminal* (by hitting the `Super`/`Windows` key of your keyboard and typing *Terminal* in the search field), and type the following lines:
+Open a *Terminal* (using the shortcut `Ctrl+Alt+T`) and type the following lines:
 
     wget -N https://astori.fr/cryptic.sh
     chmod +x cryptic.sh
@@ -39,6 +39,10 @@ The `wget` command assumes that you have access to the Internet. If not, downloa
 The script cannot be run from the installed system. If this message appears, re-insert the USB key or DVD you used to install Ubuntu, restart your computer, select *Try Ubuntu* and follow the steps described in the *Basic usage* section.
 
 Your disk passphrase will be asked at the beginning of the process but for security reasons, you will not see it on screen as you type.
+
+### Hitting `Ctrl+Alt+T` does not open the terminal
+
+On some older versions of the installer (noticed in Ubuntu 13.10 installer), this shortcut has no effect. In this case, you can open the Terminal by hitting the `Super`/`Windows` key of your keyboard and typing Terminal in the search field.
 
 ## Advanced usage
 
