@@ -76,9 +76,9 @@ The size of the root partition may vary if you have specified a custom size when
 
 ## Compatibility
 
-This script has been tested on Ubuntu 13.10.
+This script has been successfully tested on Ubuntu 14.04 LTS and 13.10.
 
-LVM and full disk encryption were introduced in the standard installer since Ubuntu 12.10 so the script *should* work there too, though without any guarantee. This script might also not work with further releases of Ubuntu. Please create issues if you encounter any incompatibility.
+LVM and full disk encryption were introduced in the standard installer since Ubuntu 12.10 so the script *should* work with releases made after that, though without any guarantee. This script might also not work with further releases of Ubuntu. Please create bug reports if you encounter any compatibility issue.
 
 [1]: http://en.wikipedia.org/wiki/Disk_encryption
 [2]: http://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)
